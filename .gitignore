@@ -4,5 +4,8 @@
 # Checkpoints
 /models/
 
+# Output
+/output/
+
 # Python artifacts
 __pycache__/
