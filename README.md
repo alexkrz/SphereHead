@@ -33,14 +33,14 @@ Create `models` folder under the root dir. Then download our model checkpoint fr
 
 ## Generating samplings
 
-```.bash
+```bash
 # Generate sampling videos using pre-trained model
 
 python gen_videos.py --network models/spherehead-ckpt-025000.pkl --seeds 0-3 --grid 2x2 --outdir=output/videos --cfg Head --trunc 0.7
 
 ```
 
-```.bash
+```bash
 # Generate sampling images using pre-trained model
 
 python gen_samples.py --trunc=0.7 --seeds=1-10 --network models/spherehead-ckpt-025000.pkl --outdir=output/samples
@@ -48,16 +48,17 @@ python gen_samples.py --trunc=0.7 --seeds=1-10 --network models/spherehead-ckpt-
 ```
 
 ## Applications
-```.bash
+
+```bash
 # Generate full head reconstruction from a single RGB image.
 # Please refer to ./gen_pti_script.sh
 # For this application we need to specify dataset folder instead of zip files.
 # Segmentation files are not necessary for PTI inversion.
 
-sh gen_pti_script.sh
+bash gen_pti_script.sh
 ```
 
-```.bash
+```bash
 # Generate full head interpolation from two seeds.
 # Please refer to ./gen_interpolation.py for the implementation
 
@@ -76,7 +77,7 @@ We have developed a data processing toolbox designed to prepare 360 degree head 
 
 If you find our repo helpful, please cite our paper using the following bib:
 
-```
+```bibtex
 @misc{li2024spherehead,
     title={SphereHead: Stable 3D Full-head Synthesis with Spherical Tri-plane Representation},
     author={Heyuan Li and Ce Chen and Tianhao Shi and Yuda Qiu and Sizhe An and Guanying Chen and Xiaoguang Han},
@@ -93,7 +94,7 @@ This repo is heavily based off the [NVlabs/eg3d](https://github.com/NVlabs/eg3d)
 
 ---
 
-## 🚀 Follow-up Work: 
+## 🚀 Follow-up Work:
 
 ### HyPlaneHead (NIPS 2025)
 
