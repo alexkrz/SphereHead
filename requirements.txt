@@ -1,0 +1,10 @@
+# Install the dependencies in a conda environment with python=3.12
+torch==2.12.*
+torchvision==0.27.*
+imageio>=2.38,<3
+imageio-ffmpeg>=0.6,<1
+click>=8.5,<9
+scipy>=1.18,<2
+tqdm>=4.70,<5
+mrcfile>=1.5,<2
+requests>=2.34,<3
