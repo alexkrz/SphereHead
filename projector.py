@@ -295,7 +295,7 @@ def run_projection(
     w, h = target_pil.size
     s = min(w, h)
     target_pil = target_pil.crop(((w - s) // 2, (h - s) // 2, (w + s) // 2, (h + s) // 2))
-    target_pil = target_pil.resize((G.img_resolution, G.img_resolution), PIL.Image.LANCZOS)
+    target_pil = target_pil.resize((G.img_resolution, G.img_resolution), PIL.Image.Resampling.LANCZOS)  # Update for Pillow > 10
     target_uint8 = np.array(target_pil, dtype=np.uint8)
 
     # Optimize projection.
